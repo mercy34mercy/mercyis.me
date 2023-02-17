@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@aspida/fetch': 1.11.0
-  '@cloudflare/workers-types': 4.20230214.0
+  '@cloudflare/workers-types': 4.20230215.0
   '@remix-run/cloudflare': 1.13.0
   '@remix-run/cloudflare-workers': 1.13.0
   '@remix-run/dev': 1.13.0
@@ -34,8 +34,8 @@ specifiers:
 
 dependencies:
   '@aspida/fetch': 1.11.0
-  '@remix-run/cloudflare': 1.13.0_zipsxxxdfl6c5dl5rdz5v74rhi
-  '@remix-run/cloudflare-workers': 1.13.0_zipsxxxdfl6c5dl5rdz5v74rhi
+  '@remix-run/cloudflare': 1.13.0_f2nunn3czneiaufanhhmxbuesa
+  '@remix-run/cloudflare-workers': 1.13.0_f2nunn3czneiaufanhhmxbuesa
   '@remix-run/react': 1.13.0_biqbaboplfbrettd7655fr4n2y
   aspida: 1.11.0
   cross-env: 7.0.3
@@ -45,7 +45,7 @@ dependencies:
   xml2js: 0.4.23
 
 devDependencies:
-  '@cloudflare/workers-types': 4.20230214.0
+  '@cloudflare/workers-types': 4.20230215.0
   '@remix-run/dev': 1.13.0
   '@remix-run/eslint-config': 1.13.0_km5ddj7uwb23cqeymeyvzjsfb4
   '@types/react': 18.0.28
@@ -1362,8 +1362,8 @@ packages:
       mime: 3.0.0
     dev: true
 
-  /@cloudflare/workers-types/4.20230214.0:
-    resolution: {integrity: sha512-PfpzIKjMA1P0HLtzZVKp/V4/rAiSkgIVwGKbQleTmj7y5O62NbWP9gAxzOeQ4LpUc8UL17KRF2rXTgNKP2HNFw==}
+  /@cloudflare/workers-types/4.20230215.0:
+    resolution: {integrity: sha512-s71gaGwtEIxjSu6l0cekbXm9AwjrmrFVcHPNx9tHidG2dnqamYf5Nms/KgMYZf7gnjdKOp/ZChYFeJJkNv3QfA==}
 
   /@emotion/hash/0.9.0:
     resolution: {integrity: sha512-14FtKiHhy2QoPIzdTcvh//8OyBlknNs2nXRwIhG904opCby3l+9Xaf/wuPvICBF0rc1ZCNBd3nKe9cd2mecVkQ==}
@@ -1925,25 +1925,25 @@ packages:
       tslib: 2.4.1
     dev: true
 
-  /@remix-run/cloudflare-workers/1.13.0_zipsxxxdfl6c5dl5rdz5v74rhi:
+  /@remix-run/cloudflare-workers/1.13.0_f2nunn3czneiaufanhhmxbuesa:
     resolution: {integrity: sha512-5KriVXoaq/Yz7TBiAg2B7AjuOrylDnT8ETTWwpulFzJcVl+C03P4XEcufNoTJclhVmo69xawr1v06s4QBafXEQ==}
     engines: {node: '>=14'}
     peerDependencies:
       '@cloudflare/workers-types': ^2.0.0 || ^3.0.0
     dependencies:
       '@cloudflare/kv-asset-handler': 0.1.3
-      '@cloudflare/workers-types': 4.20230214.0
-      '@remix-run/cloudflare': 1.13.0_zipsxxxdfl6c5dl5rdz5v74rhi
+      '@cloudflare/workers-types': 4.20230215.0
+      '@remix-run/cloudflare': 1.13.0_f2nunn3czneiaufanhhmxbuesa
     dev: false
 
-  /@remix-run/cloudflare/1.13.0_zipsxxxdfl6c5dl5rdz5v74rhi:
+  /@remix-run/cloudflare/1.13.0_f2nunn3czneiaufanhhmxbuesa:
     resolution: {integrity: sha512-/S1z6fSshbHE89MSRnbXYfMCe7m6LYDplsvStCmYoRhWUBZdoeEPtLD10lI/1gZHsaV4uqZCqUH9IUSD5cqVkA==}
     engines: {node: '>=14'}
     peerDependencies:
       '@cloudflare/workers-types': ^2.0.0 || ^3.0.0
     dependencies:
       '@cloudflare/kv-asset-handler': 0.1.3
-      '@cloudflare/workers-types': 4.20230214.0
+      '@cloudflare/workers-types': 4.20230215.0
       '@remix-run/server-runtime': 1.13.0
     dev: false
 
