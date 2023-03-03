@@ -1,4 +1,4 @@
-import type { MetaFunction, DataFunctionArgs } from "@remix-run/cloudflare";
+import type { MetaFunction, DataFunctionArgs, HeadersFunction } from "@remix-run/cloudflare";
 import { json } from "@remix-run/cloudflare";
 import { useLoaderData } from "@remix-run/react";
 import type { MicroCMSDate } from "microcms-js-sdk";
@@ -11,6 +11,10 @@ import { Footer } from "~/components/Footer";
 import { getEnglishDate } from "~/utils/getEnglishDate";
 import { Spacer } from "~/components/Spacer";
 import { Bio } from "~/components/Bio";
+
+export const headers: HeadersFunction = () => ({
+  "Cache-Control": "max-age=0, s-maxage=300, stale-while-revalidate=300",
+});
 
 export function links() {
   return [{ rel: "stylesheet", href: styles }];
