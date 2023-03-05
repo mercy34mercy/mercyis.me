@@ -1,0 +1,8 @@
+name = "api"
+main = "src/index.ts"
+compatibility_date = "2023-03-05"
+
+[[ d1_databases ]]
+binding = "DB" # i.e. available in your Worker on env.DB
+database_name = "apple-yagi-me"
+database_id = "9c815c67-3431-458b-beb4-512e6b91c62d"

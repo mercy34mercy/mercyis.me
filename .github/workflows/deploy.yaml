@@ -4,8 +4,9 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - main
-
+    - main
+    paths-ignore:
+    - 'api/**'
 jobs:
   deploy:
     runs-on: ubuntu-22.04
