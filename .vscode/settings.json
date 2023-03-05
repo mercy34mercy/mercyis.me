@@ -15,5 +15,8 @@
   },
   "[javascriptreact]": {
     "editor.defaultFormatter": "rome.rome"
+  },
+  "yaml.schemas": {
+    "https://json.schemastore.org/github-workflow.json": "file:///Users/ryuya/workspace/apple-yagi.me/.github/workflows/deploy.yaml"
   }
 }
