@@ -1,0 +1,14 @@
+{
+  "name": "@apple-yagi.me/api",
+  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "scripts": {
+    "dev": "miniflare ./build/index.js --watch"
+  },
+  "dependencies": {
+    "hono": "3.0.3"
+  },
+  "devDependencies": {
+    "miniflare": "2.12.1"
+  }
+}
