@@ -33,8 +33,8 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => ({
   "twitter:site": "@apple_yagi",
 });
 
-export const loader = async ({ params, context }: LoaderArgs) => {
-  console.log(context);
+export const loader = async ({ params }: LoaderArgs) => {
+  console.log(env);
 
   const content = await microcmsApi.blogs._id(params.contentId as string).$get();
   content.publishedAt = getEnglishDate(new Date(content.publishedAt || ""));
