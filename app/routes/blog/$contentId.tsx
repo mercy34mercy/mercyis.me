@@ -34,8 +34,6 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => ({
 });
 
 export const loader = async ({ params }: LoaderArgs) => {
-  console.log(DB);
-
   const content = await microcmsApi.blogs._id(params.contentId as string).$get();
   content.publishedAt = getEnglishDate(new Date(content.publishedAt || ""));
   return json(content);
