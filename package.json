@@ -17,7 +17,8 @@
     "lint": "eslint app --ext ts,tsx",
     "lint:fix": "eslint app --fix --ext ts,tsx",
     "format": "rome format app",
-    "format:write": "rome format app --write"
+    "format:write": "rome format app --write",
+    "typegen": "wrangler types"
   },
   "dependencies": {
     "@aspida/fetch": "1.11.0",
