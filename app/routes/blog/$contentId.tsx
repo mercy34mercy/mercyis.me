@@ -1,4 +1,4 @@
-import type { MetaFunction, DataFunctionArgs, HeadersFunction } from "@remix-run/cloudflare";
+import type { MetaFunction, HeadersFunction, LoaderArgs } from "@remix-run/cloudflare";
 import { json } from "@remix-run/cloudflare";
 import { useLoaderData } from "@remix-run/react";
 import type { MicroCMSDate } from "microcms-js-sdk";
@@ -33,7 +33,9 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => ({
   "twitter:site": "@apple_yagi",
 });
 
-export const loader = async ({ params }: DataFunctionArgs) => {
+export const loader = async ({ params, context }: LoaderArgs) => {
+  console.log(context.DB);
+
   const content = await microcmsApi.blogs._id(params.contentId as string).$get();
   content.publishedAt = getEnglishDate(new Date(content.publishedAt || ""));
   return json(content);
