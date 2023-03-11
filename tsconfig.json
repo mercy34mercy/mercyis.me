@@ -17,6 +17,6 @@
     },
     "noEmit": true
   },
-  "include": ["remix.env.d.ts", "**/*.ts", "**/*.tsx", "types/*.d.ts"],
+  "include": ["remix.env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["./node_modules"]
 }

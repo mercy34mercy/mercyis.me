@@ -1,4 +1,4 @@
-import type { HeadersFunction, LoaderFunction } from "@remix-run/cloudflare";
+import type { HeadersFunction } from "@remix-run/cloudflare";
 import { json } from "@remix-run/cloudflare";
 import { useLoaderData } from "@remix-run/react";
 import { SocialLinks } from "~/components/SocialLinks";
@@ -13,12 +13,14 @@ import { fetchQiitaFeed } from "~/api/qiita";
 import { Timeline } from "~/components/Timeline";
 import { fetchMicrocms } from "~/api/microcms";
 import { Footer } from "~/components/Footer";
+import type { LoaderFunction } from "~/types/remix";
 
 export const headers: HeadersFunction = () => ({
   "Cache-Control": "max-age=0, s-maxage=300, stale-while-revalidate=300",
 });
 
-export const loader: LoaderFunction = async () => {
+export const loader: LoaderFunction = async ({ context: { env } }) => {
+  const { API_FETCH_KV } = env;
   const cacheData = (await API_FETCH_KV.get(API_FETCH_KV_KEY.timeline, "json")) as TimelineItem[];
 
   if (cacheData) {
