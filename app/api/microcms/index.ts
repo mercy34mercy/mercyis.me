@@ -1,6 +1,6 @@
 import aspida from "@aspida/fetch";
 import api from "./$api";
-import type { TimelineItem } from "~/components/TimelineCard";
+import type { TimelineItem } from "~/templates/HomePageTemplate/Timeline/TimelineCard";
 import { getEnglishDate } from "~/utils/getEnglishDate";
 
 export const createMicrocmsApi = (apiKey: string, baseURL: string) =>
