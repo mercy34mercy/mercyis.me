@@ -1,5 +1,6 @@
 import type { MicroCMSDate } from "microcms-js-sdk";
 import { Fragment } from "react";
+import { Link } from "@remix-run/react";
 import { ContentViewer } from "./ContentViewer";
 import { Bio } from "./Bio";
 import { BlogReactions } from "./BlogReactions";
@@ -13,7 +14,7 @@ type Props = {
 export const BlogDetailPageTemplate = ({ content }: Props) => (
   <Fragment>
     <header className="py-4 flex gap-2 text-md">
-      <a href="/">Home 🏠</a>
+      <Link to="/">Home 🏠</Link>
       <span className="text-gray-500">{`>`}</span>
       <span>📝</span>
     </header>
@@ -27,7 +28,7 @@ export const BlogDetailPageTemplate = ({ content }: Props) => (
     <Spacer size={10} />
     <ContentViewer text={content.content || ""} />
     <Spacer size={20} />
-    <BlogReactions />
+    <BlogReactions title={content.title} />
     <Bio />
   </Fragment>
 );
