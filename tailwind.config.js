@@ -9,10 +9,10 @@ module.exports = {
       backgroundColor: {
         primary: "#1a1e2e",
         secondary: "#2b3047",
+        twitter: "#1DA1F2",
       },
       fontFamily: {
-        primary:
-          "Inter,Helvetica Neue,Arial,Hiragino Kaku Gothic ProN,Hiragino Sans,Meiryo,sans-serif",
+        primary: "Inter,Helvetica Neue,Arial,Hiragino Kaku Gothic ProN,Hiragino Sans,Meiryo,sans-serif",
       },
       screens: {
         xs: "475px",
