@@ -15,10 +15,8 @@
     "dev": "pnpm run build && pnpm run \"/^dev:.*/\"",
     "api:build": "aspida",
     "typecheck": "tsc --noEmit",
-    "lint": "eslint app --ext ts,tsx",
-    "lint:fix": "eslint app --fix --ext ts,tsx",
-    "format": "rome format app",
-    "format:write": "rome format app --write",
+    "lint": "eslint app --fix --ext ts,tsx",
+    "format": "rome format app --write",
     "typegen": "wrangler types"
   },
   "dependencies": {
