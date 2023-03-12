@@ -1,5 +1,0 @@
-FROM node:19
-RUN curl -sL https://unpkg.com/@pnpm/self-installer | node
-COPY . .
-RUN pnpm install
-RUN pnpm run build

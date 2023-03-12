@@ -13,7 +13,6 @@
     "dev:miniflare": "cross-env NODE_ENV=development wrangler dev --local",
     "dev:css": "tailwindcss -w -i app/styles/app.css -o app/styles/generated.css",
     "dev": "pnpm run build && pnpm run \"/^dev:.*/\"",
-    "start": "cross-env NODE_ENV=production miniflare ./build/index.js",
     "api:build": "aspida",
     "typecheck": "tsc --noEmit",
     "lint": "eslint app --ext ts,tsx",

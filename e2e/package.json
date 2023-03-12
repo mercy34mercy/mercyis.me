@@ -7,7 +7,8 @@
     "codegen": "playwright codegen 'http://127.0.0.1:8787/'",
     "debug": "playwright test --debug",
     "test": "playwright test",
-    "test:production": "cross-env NODE_ENV=production playwright test"
+    "test:ci": "CI=1 playwright test",
+    "test:production": "NODE_ENV=production CI=1 playwright test"
   },
   "dependencies": {
     "@playwright/test": "1.31.2",
