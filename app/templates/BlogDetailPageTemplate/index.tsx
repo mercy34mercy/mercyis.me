@@ -2,6 +2,7 @@ import type { MicroCMSDate } from "microcms-js-sdk";
 import { Fragment } from "react";
 import { ContentViewer } from "./ContentViewer";
 import { Bio } from "./Bio";
+import { BlogReactions } from "./BlogReactions";
 import type { Content } from "~/api/microcms/types";
 import { Spacer } from "~/components/Spacer";
 
@@ -26,6 +27,7 @@ export const BlogDetailPageTemplate = ({ content }: Props) => (
     <Spacer size={10} />
     <ContentViewer text={content.content || ""} />
     <Spacer size={20} />
+    <BlogReactions />
     <Bio />
   </Fragment>
 );
