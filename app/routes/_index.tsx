@@ -1,19 +1,14 @@
 import type { HeadersFunction } from "@remix-run/cloudflare";
 import { json } from "@remix-run/cloudflare";
 import { useLoaderData } from "@remix-run/react";
-import { SocialLinks } from "~/components/SocialLinks";
-import { Profile } from "~/components/Profile";
+import type { TimelineItem } from "~/templates/HomePageTemplate/Timeline/TimelineCard";
 import { fetchZeenFeed } from "~/api/zenn";
-import { Container } from "~/components/Container";
-import { Spacer } from "~/components/Spacer";
-import type { TimelineItem } from "~/components/TimelineCard";
 import { API_FETCH_KV_KEY } from "~/consts/kv";
 import { fetchPrtimesFeed } from "~/api/prtimes";
 import { fetchQiitaFeed } from "~/api/qiita";
-import { Timeline } from "~/components/Timeline";
 import { fetchMicrocms } from "~/api/microcms";
-import { Footer } from "~/components/Footer";
 import type { LoaderFunction } from "~/types/remix";
+import { HomePageTemplate } from "~/templates/HomePageTemplate";
 
 export const headers: HeadersFunction = () => ({
   "Cache-Control": "max-age=0, s-maxage=300, stale-while-revalidate=300",
@@ -46,17 +41,5 @@ export const loader: LoaderFunction = async ({ context: { env } }) => {
 };
 
 export default function Index() {
-  const timeline = useLoaderData<TimelineItem[]>();
-
-  return (
-    <Container className="px-6">
-      <Spacer size={16} />
-      <Profile />
-      <Spacer size={16} />
-      <SocialLinks />
-      <Spacer size={24} />
-      <Timeline timeline={timeline} />
-      <Footer />
-    </Container>
-  );
+  return <HomePageTemplate timeline={useLoaderData<TimelineItem[]>()} />;
 }

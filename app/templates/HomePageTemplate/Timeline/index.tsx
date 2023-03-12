@@ -1,7 +1,7 @@
 import { Fragment } from "react";
-import { Spacer } from "./Spacer";
 import type { TimelineItem } from "./TimelineCard";
 import { TimelineCard } from "./TimelineCard";
+import { Spacer } from "~/components/Spacer";
 
 type Props = {
   timeline: TimelineItem[];

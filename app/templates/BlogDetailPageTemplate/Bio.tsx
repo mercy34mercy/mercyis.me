@@ -1,7 +1,7 @@
-import { GitHubIcon } from "./icons/GitHubIcon";
-import { TwitterIcon } from "./icons/TwitterIcon";
-import { ZennIcon } from "./icons/ZennIcon";
-import { Image } from "./Image";
+import { GitHubIcon } from "~/components/icons/GitHubIcon";
+import { TwitterIcon } from "~/components/icons/TwitterIcon";
+import { ZennIcon } from "~/components/icons/ZennIcon";
+import { Image } from "~/components/Image";
 
 export const Bio = () => (
   <div className="pt-16 flex flex-col items-center border-t border-gray-600">

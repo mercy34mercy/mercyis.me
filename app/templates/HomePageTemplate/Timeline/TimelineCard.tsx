@@ -1,8 +1,8 @@
 import { Link } from "@remix-run/react";
 import type { ComponentPropsWithoutRef } from "react";
 import { memo } from "react";
-import { ZennIcon } from "./icons/ZennIcon";
-import { Image } from "./Image";
+import { ZennIcon } from "../../../components/icons/ZennIcon";
+import { Image } from "../../../components/Image";
 
 export type TimelineKind = "Zenn" | "Prtimes" | "Qiita" | "MyBlog";
 

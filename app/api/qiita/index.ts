@@ -1,4 +1,4 @@
-import type { TimelineItem } from "~/components/TimelineCard";
+import type { TimelineItem } from "~/templates/HomePageTemplate/Timeline/TimelineCard";
 import { getEnglishDate } from "~/utils/getEnglishDate";
 
 const URL = "https://qiita.com/api/v2/items?page=1&per_page=100&query=user%3Aapple-yagi";

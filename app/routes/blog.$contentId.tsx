@@ -4,14 +4,10 @@ import { useLoaderData } from "@remix-run/react";
 import type { MicroCMSDate } from "microcms-js-sdk";
 import styles from "~/styles/content.css";
 import type { Content } from "~/api/microcms/types";
-import { ContentViewer } from "~/components/ContentViewer";
-import { Container } from "~/components/Container";
-import { Footer } from "~/components/Footer";
 import { getEnglishDate } from "~/utils/getEnglishDate";
-import { Spacer } from "~/components/Spacer";
-import { Bio } from "~/components/Bio";
 import { createMicrocmsApi } from "~/api/microcms";
 import type { LoaderFunction } from "~/types/remix";
+import { BlogDetailPageTemplate } from "~/templates/BlogDetailPageTemplate";
 
 export const headers: HeadersFunction = () => ({
   "Cache-Control": "max-age=0, s-maxage=300, stale-while-revalidate=300",
@@ -43,27 +39,5 @@ export const loader: LoaderFunction = async ({ params, context: { env } }) => {
 };
 
 export default function $ContentId() {
-  const content = useLoaderData<Content & MicroCMSDate>();
-
-  return (
-    <Container className="px-6">
-      <header className="py-4 flex gap-2 text-md">
-        <a href="/">Home 🏠</a>
-        <span className="text-gray-500">{`>`}</span>
-        <span>📝</span>
-      </header>
-      <div className="text-center pb-6 border-b border-gray-600">
-        <h1 className="text-2xl pt-10 py-5">{content.title}</h1>
-        <div>
-          <div className="text-gray-400 text-sm">Published</div>
-          <time className="text-sm">{content.publishedAt || ""}</time>
-        </div>
-      </div>
-      <Spacer size={10} />
-      <ContentViewer text={content.content || ""} />
-      <Spacer size={20} />
-      <Bio />
-      <Footer />
-    </Container>
-  );
+  return <BlogDetailPageTemplate content={useLoaderData<Content & MicroCMSDate>()} />;
 }

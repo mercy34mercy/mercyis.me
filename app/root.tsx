@@ -1,6 +1,8 @@
 import type { MetaFunction } from "@remix-run/cloudflare";
 import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration } from "@remix-run/react";
 import styles from "./styles/generated.css";
+import { Container } from "./components/Container";
+import { Footer } from "./components/Footer";
 
 export function links() {
   return [{ rel: "stylesheet", href: styles }];
@@ -29,7 +31,10 @@ export default function App() {
         <Links />
       </head>
       <body className="text-primary bg-primary font-primary">
-        <Outlet />
+        <Container className="px-6">
+          <Outlet />
+          <Footer />
+        </Container>
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
