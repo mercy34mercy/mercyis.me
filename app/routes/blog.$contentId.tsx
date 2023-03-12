@@ -1,9 +1,8 @@
-import type { MetaFunction, HeadersFunction, LoaderArgs } from "@remix-run/cloudflare";
+import type { MetaFunction, HeadersFunction } from "@remix-run/cloudflare";
 import { json } from "@remix-run/cloudflare";
 import { useLoaderData } from "@remix-run/react";
 import type { MicroCMSDate } from "microcms-js-sdk";
 import styles from "~/styles/content.css";
-import { microcmsApi } from "~/api/microcms";
 import type { Content } from "~/api/microcms/types";
 import { ContentViewer } from "~/components/ContentViewer";
 import { Container } from "~/components/Container";
@@ -11,6 +10,8 @@ import { Footer } from "~/components/Footer";
 import { getEnglishDate } from "~/utils/getEnglishDate";
 import { Spacer } from "~/components/Spacer";
 import { Bio } from "~/components/Bio";
+import { createMicrocmsApi } from "~/api/microcms";
+import type { LoaderFunction } from "~/types/remix";
 
 export const headers: HeadersFunction = () => ({
   "Cache-Control": "max-age=0, s-maxage=300, stale-while-revalidate=300",
@@ -33,8 +34,10 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => ({
   "twitter:site": "@apple_yagi",
 });
 
-export const loader = async ({ params }: LoaderArgs) => {
-  const content = await microcmsApi.blogs._id(params.contentId as string).$get();
+export const loader: LoaderFunction = async ({ params, context: { env } }) => {
+  const content = await createMicrocmsApi(env.X_MICROCMS_API_KEY, env.MICROCMS_BASE_URL)
+    .blogs._id(params.contentId as string)
+    .$get();
   content.publishedAt = getEnglishDate(new Date(content.publishedAt || ""));
   return json(content);
 };

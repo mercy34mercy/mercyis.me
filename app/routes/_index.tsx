@@ -27,7 +27,12 @@ export const loader: LoaderFunction = async ({ context: { env } }) => {
     return json(cacheData);
   }
 
-  const promiseList = await Promise.all([fetchZeenFeed(), fetchPrtimesFeed(), fetchQiitaFeed(), fetchMicrocms()]);
+  const promiseList = await Promise.all([
+    fetchZeenFeed(),
+    fetchPrtimesFeed(),
+    fetchQiitaFeed(),
+    fetchMicrocms(env.X_MICROCMS_API_KEY, env.MICROCMS_BASE_URL),
+  ]);
 
   const timeline = promiseList
     .flat()

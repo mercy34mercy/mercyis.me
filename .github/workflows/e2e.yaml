@@ -27,11 +27,11 @@ jobs:
           version: 7
           run_install: true
 
-      - name: Setup dot env file
+      - name: Setup dot dev.vars file
         run: |
-          echo ${{ secrets.MICROCMS_BASE_URL }} >> .env
-          echo ${{ secrets.X_MICROCMS_API_KEY }} >> .env
-          echo TZ=Asia/Tokyo >> .env
+          echo ${{ secrets.MICROCMS_BASE_URL }} >> .dev.vars
+          echo ${{ secrets.X_MICROCMS_API_KEY }} >> .dev.vars
+          echo TZ=Asia/Tokyo >> .dev.vars
         working-directory: .
 
       - if: ${{ github.event_name != 'workflow_run' }}

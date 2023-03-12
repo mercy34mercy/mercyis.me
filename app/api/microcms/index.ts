@@ -3,16 +3,25 @@ import api from "./$api";
 import type { TimelineItem } from "~/components/TimelineCard";
 import { getEnglishDate } from "~/utils/getEnglishDate";
 
-const fetchConfig = {
-  headers: {
-    "X-MICROCMS-API-KEY": X_MICROCMS_API_KEY,
-  },
-  baseURL: MICROCMS_BASE_URL,
-};
+export const createMicrocmsApi = (apiKey: string, baseURL: string) =>
+  api(
+    aspida(fetch, {
+      headers: {
+        "X-MICROCMS-API-KEY": apiKey,
+      },
+      baseURL,
+    }),
+  );
 
-export const microcmsApi = api(aspida(fetch, fetchConfig));
-
-export const fetchMicrocms = async (): Promise<TimelineItem[]> => {
+export const fetchMicrocms = async (apiKey: string, baseURL: string): Promise<TimelineItem[]> => {
+  const microcmsApi = api(
+    aspida(fetch, {
+      headers: {
+        "X-MICROCMS-API-KEY": apiKey,
+      },
+      baseURL,
+    }),
+  );
   const res = await microcmsApi.blogs.$get();
 
   return res.contents.map((content) => ({

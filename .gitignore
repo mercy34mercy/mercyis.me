@@ -6,6 +6,7 @@ node_modules
 /public/build
 /.mf
 .env
+.dev.vars
 
 # Mac OS
 .DS_Store
