@@ -8,7 +8,7 @@ interface Props extends HTMLAttributes<HTMLOrSVGElement> {
 
 export const ReactionButton = ({ as: Comp = "button", children, ...props }: Props) => (
   <Comp
-    className="flex justify-center items-center content-center w-14 h-14 rounded-full text-3xl hover:bg-secondary"
+    className="flex justify-center items-center content-center w-10 h-10 rounded-full text-3xl hover:bg-secondary"
     {...props}
   >
     {children}
