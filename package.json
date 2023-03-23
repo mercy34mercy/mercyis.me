@@ -44,7 +44,7 @@
     "eslint": "8.36.0",
     "eslint-plugin-react": "7.32.2",
     "lint-staged": "13.2.0",
-    "miniflare": "2.12.2",
+    "miniflare": "2.13.0",
     "postcss": "8.4.21",
     "rome": "11.0.0",
     "tailwindcss": "3.2.7",
