@@ -11,9 +11,9 @@
     "test:production": "NODE_ENV=production CI=1 playwright test"
   },
   "dependencies": {
-    "@playwright/test": "1.32.0",
+    "@playwright/test": "1.32.1",
     "cross-env": "7.0.3",
-    "playwright": "1.32.0",
+    "playwright": "1.32.1",
     "typescript": "5.0.2"
   }
 }
