@@ -41,7 +41,7 @@
     "@types/xml2js": "0.4.11",
     "autoprefixer": "10.4.14",
     "concurrently": "7.6.0",
-    "eslint": "8.36.0",
+    "eslint": "8.37.0",
     "eslint-plugin-react": "7.32.2",
     "lint-staged": "13.2.0",
     "miniflare": "2.13.0",
