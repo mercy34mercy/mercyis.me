@@ -22,7 +22,7 @@ const TimelineImage = memo(({ kind }: { kind: TimelineKind }) => {
     case "Prtimes":
       return <Image imageName="prtimes.png" alt="PR TIMES" width={20} height={20} loading="lazy" />;
     case "Note":
-      return <Image imageName="note.png" alt="note" width={20} height={20} loading="lazy" />;
+      return <Image imageName="note-white.png" alt="note" width={20} height={20} loading="lazy" />;
     case "Qiita":
       return <Image imageName="qiita.png" alt="Qiita" width={20} height={20} loading="lazy" />;
     case "MyBlog":

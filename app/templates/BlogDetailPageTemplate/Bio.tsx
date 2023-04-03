@@ -26,6 +26,9 @@ export const Bio = () => (
       <a href="https://qiita.com/mercy34mercy">
         <Image imageName="qiita.png" alt="Qiita" width={24} height={24} loading="eager" aria-label="Qiita" />
       </a>
+      <a href="https://note.com/nanndemokakuyo">
+        <Image imageName="note-white.png" alt="Note" width={24} height={24} loading="eager" aria-label="Note" />
+      </a>
     </div>
   </div>
 );
