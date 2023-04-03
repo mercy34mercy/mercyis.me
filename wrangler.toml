@@ -17,6 +17,8 @@ kv_namespaces = [
 
 [vars]
   TZ = "Asia/Tokyo"
+  X_MICROCMS_API_KEY="0006fabd418b4900a6ab6337159a62b24aa5"
+  MICROCMS_BASE_URL="https://portfoliomercy.microcms.io/api/v1"
 
 [[ d1_databases ]]
 binding = "DB" # i.e. available in your Worker on env.DB
