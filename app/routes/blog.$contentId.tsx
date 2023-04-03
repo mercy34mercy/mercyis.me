@@ -20,7 +20,7 @@ export function links() {
 export const meta: MetaFunction<typeof loader> = ({ data }) => ({
   title: data.title,
   description: data.content.replace(/(<([^>]+)>)/gi, "").slice(0, 120),
-  "og:url": `https://apple-yagi.me/blog/${data.id}`,
+  "og:url": `https://mercy.mercy34.workers.dev/blog/${data.id}`,
   "og:title": `${data.title}`,
   "og:description": data.content.replace(/(<([^>]+)>)/gi, "").slice(0, 120),
   "og:image": data.eyecatch.url,
