@@ -8,6 +8,7 @@ import { fetchQiitaFeed } from "~/api/qiita";
 import { fetchMicrocms } from "~/api/microcms";
 import type { LoaderFunction } from "~/types/remix";
 import { HomePageTemplate } from "~/templates/HomePageTemplate";
+import { fetchNoteFeed } from "~/api/note";
 
 export const headers: HeadersFunction = () => ({
   "Cache-Control": "max-age=0, s-maxage=300, stale-while-revalidate=300",
@@ -24,6 +25,7 @@ export const loader: LoaderFunction = async ({ context: { env } }) => {
   const promiseList = await Promise.all([
     fetchZeenFeed(),
     fetchQiitaFeed(),
+    fetchNoteFeed(),
     fetchMicrocms(env.X_MICROCMS_API_KEY, env.MICROCMS_BASE_URL),
   ]);
 
