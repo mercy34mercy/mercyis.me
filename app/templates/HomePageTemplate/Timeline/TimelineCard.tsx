@@ -27,8 +27,8 @@ const TimelineImage = memo(({ kind }: { kind: TimelineKind }) => {
       return (
         <Image
           className="rounded-full"
-          imageName="apple-yagi.jpg"
-          alt="apple-yagi.me"
+          imageName="mercy.jpg"
+          alt="mercy.me"
           width={20}
           height={20}
           loading="lazy"

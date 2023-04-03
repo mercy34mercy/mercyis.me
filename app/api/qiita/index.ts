@@ -1,7 +1,7 @@
 import type { TimelineItem } from "~/templates/HomePageTemplate/Timeline/TimelineCard";
 import { getEnglishDate } from "~/utils/getEnglishDate";
 
-const URL = "https://qiita.com/api/v2/items?page=1&per_page=100&query=user%3Aapple-yagi";
+const URL = "https://qiita.com/api/v2/items?page=1&per_page=100&query=user%3Amercy34mercy";
 
 export const fetchQiitaFeed = async (): Promise<TimelineItem[]> => {
   const items = (await (await fetch(URL)).json()) as any;

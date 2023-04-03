@@ -2,7 +2,7 @@ import { parseStringPromise } from "xml2js";
 import type { TimelineItem } from "~/templates/HomePageTemplate/Timeline/TimelineCard";
 import { getEnglishDate } from "~/utils/getEnglishDate";
 
-const URL = "https://zenn.dev/apple_yagi/feed";
+const URL = "https://zenn.dev/mercy34/feed";
 
 export const fetchZeenFeed = async (): Promise<TimelineItem[]> => {
   const xml = await (await fetch(URL)).text();

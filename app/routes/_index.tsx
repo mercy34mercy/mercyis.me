@@ -4,7 +4,6 @@ import { useLoaderData } from "@remix-run/react";
 import type { TimelineItem } from "~/templates/HomePageTemplate/Timeline/TimelineCard";
 import { fetchZeenFeed } from "~/api/zenn";
 import { API_FETCH_KV_KEY } from "~/consts/kv";
-import { fetchPrtimesFeed } from "~/api/prtimes";
 import { fetchQiitaFeed } from "~/api/qiita";
 import { fetchMicrocms } from "~/api/microcms";
 import type { LoaderFunction } from "~/types/remix";
@@ -24,7 +23,6 @@ export const loader: LoaderFunction = async ({ context: { env } }) => {
 
   const promiseList = await Promise.all([
     fetchZeenFeed(),
-    fetchPrtimesFeed(),
     fetchQiitaFeed(),
     fetchMicrocms(env.X_MICROCMS_API_KEY, env.MICROCMS_BASE_URL),
   ]);
