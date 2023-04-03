@@ -6,7 +6,7 @@ main = "worker/index.ts"
 compatibility_date = "2023-04-03"
 
 kv_namespaces = [
-  { binding = "API_FETCH_KV", id = "d2cccb257de74447bff2696bb94b6038", preview_id = "5afab85b86c3427eacd92051c4467e43" }
+  { binding = "API_FETCH_KV", id = "76f58b96abcf4853ac57c3a59853a376", preview_id = "76f58b96abcf4853ac57c3a59853a376" }
 ]
 
 [site]
@@ -20,5 +20,5 @@ kv_namespaces = [
 
 [[ d1_databases ]]
 binding = "DB" # i.e. available in your Worker on env.DB
-database_name = "apple-yagi-me"
-database_id = "9c815c67-3431-458b-beb4-512e6b91c62d"
+database_name = "mercy-me"
+database_id = "86297234-cd30-4186-8d5f-ac7ef9b0bbda"
