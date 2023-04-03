@@ -1,9 +1,9 @@
-name = "apple-yagi"
+name = "mercy"
 
 workers_dev = true
 main = "worker/index.ts"
 # https://developers.cloudflare.com/workers/platform/compatibility-dates
-compatibility_date = "2022-04-05"
+compatibility_date = "2023-04-03"
 
 kv_namespaces = [
   { binding = "API_FETCH_KV", id = "d2cccb257de74447bff2696bb94b6038", preview_id = "5afab85b86c3427eacd92051c4467e43" }

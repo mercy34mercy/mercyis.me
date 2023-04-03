@@ -1,25 +1,25 @@
-name: Deploy
+# name: Deploy
 
-on:
-  workflow_dispatch:
-  push:
-    branches:
-    - main
-jobs:
-  deploy:
-    runs-on: ubuntu-22.04
-    name: Deploy
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 18
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 7
-          run_install: true
-      - name: Publish
-        uses: cloudflare/wrangler-action@2.0.0
-        with:
-          apiToken: ${{ secrets.CF_API_TOKEN }}
-          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+# on:
+#   workflow_dispatch:
+#   push:
+#     branches:
+#     - main
+# jobs:
+#   deploy:
+#     runs-on: ubuntu-22.04
+#     name: Deploy
+#     steps:
+#       - uses: actions/checkout@v3
+#       - uses: actions/setup-node@v3
+#         with:
+#           node-version: 18
+#       - uses: pnpm/action-setup@v2
+#         with:
+#           version: 7
+#           run_install: true
+#       - name: Publish
+#         uses: cloudflare/wrangler-action@2.0.0
+#         with:
+#           apiToken: ${{ secrets.CF_API_TOKEN }}
+#           accountId: ${{ secrets.CF_ACCOUNT_ID }}

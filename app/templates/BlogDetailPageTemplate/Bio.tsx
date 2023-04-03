@@ -7,8 +7,8 @@ export const Bio = () => (
   <div className="pt-16 flex flex-col items-center border-t border-gray-600">
     <Image
       className="rounded-full aspect-square w-24 h-24"
-      imageName="apple-yagi.jpg"
-      alt="apple-yagi"
+      imageName="mercy.jpg"
+      alt="mercy"
       loading="eager"
       width={100}
       height={100}

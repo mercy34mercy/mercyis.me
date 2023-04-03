@@ -1,50 +1,50 @@
-name: E2E
+# name: E2E
 
-on:
-  workflow_dispatch:
-  workflow_run:
-    workflows:
-    - Deploy
-    types:
-    - completed
-  pull_request:
+# on:
+#   workflow_dispatch:
+#   workflow_run:
+#     workflows:
+#     - Deploy
+#     types:
+#     - completed
+#   pull_request:
 
-jobs:
-  e2e:
-    runs-on: ubuntu-22.04
+# jobs:
+#   e2e:
+#     runs-on: ubuntu-22.04
 
-    defaults:
-      run:
-        working-directory: e2e
+#     defaults:
+#       run:
+#         working-directory: e2e
 
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 18
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 7
-          run_install: true
+#     steps:
+#       - uses: actions/checkout@v3
+#       - uses: actions/setup-node@v3
+#         with:
+#           node-version: 18
+#       - uses: pnpm/action-setup@v2
+#         with:
+#           version: 7
+#           run_install: true
 
-      - name: Setup dot dev.vars file
-        run: |
-          echo ${{ secrets.MICROCMS_BASE_URL }} >> .dev.vars
-          echo ${{ secrets.X_MICROCMS_API_KEY }} >> .dev.vars
-          echo TZ=Asia/Tokyo >> .dev.vars
-        working-directory: .
+#       - name: Setup dot dev.vars file
+#         run: |
+#           echo ${{ secrets.MICROCMS_BASE_URL }} >> .dev.vars
+#           echo ${{ secrets.X_MICROCMS_API_KEY }} >> .dev.vars
+#           echo TZ=Asia/Tokyo >> .dev.vars
+#         working-directory: .
 
-      - if: ${{ github.event_name != 'workflow_run' }}
-        name: Run E2E
-        run: pnpm run test:ci
+#       - if: ${{ github.event_name != 'workflow_run' }}
+#         name: Run E2E
+#         run: pnpm run test:ci
 
-      - if: ${{ github.event_name == 'workflow_run' }}
-        name: Run E2E for production
-        run: pnpm run test:production
+#       - if: ${{ github.event_name == 'workflow_run' }}
+#         name: Run E2E for production
+#         run: pnpm run test:production
 
-      - uses: actions/upload-artifact@v3
-        if: success() || failure()
-        with:
-          name: test-results
-          path: e2e/test-results
-          retention-days: 7
+#       - uses: actions/upload-artifact@v3
+#         if: success() || failure()
+#         with:
+#           name: test-results
+#           path: e2e/test-results
+#           retention-days: 7

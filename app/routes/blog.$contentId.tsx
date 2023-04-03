@@ -24,10 +24,10 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => ({
   "og:title": `${data.title}`,
   "og:description": data.content.replace(/(<([^>]+)>)/gi, "").slice(0, 120),
   "og:image": data.eyecatch.url,
-  "og:site_name": "apple-yagi",
+  "og:site_name": "mercy",
   "twitter:card": data.eyecatch.url ? "summary_large_image" : "summary",
-  "twitter:creator": "@apple_yagi",
-  "twitter:site": "@apple_yagi",
+  "twitter:creator": "@mashikotyan34",
+  "twitter:site": "@mashikotyan34",
 });
 
 export const loader: LoaderFunction = async ({ params, context: { env } }) => {

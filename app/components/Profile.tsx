@@ -4,8 +4,8 @@ export const Profile = () => (
   <div className="flex items-center sm:items-start gap-6">
     <Image
       className="rounded-full aspect-square w-24 h-24"
-      imageName="apple-yagi.jpg"
-      alt="apple-yagi"
+      imageName="mercy.jpg"
+      alt="mercy"
       loading="eager"
       width={100}
       height={100}
