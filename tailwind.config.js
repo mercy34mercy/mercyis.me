@@ -5,10 +5,11 @@ module.exports = {
     extend: {
       colors: {
         primary: "#fff",
+        secondary: "#0E1116",
       },
       backgroundColor: {
-        primary: "#1a1e2e",
-        secondary: "#2b3047",
+        primary: "#0E1116",
+        secondary: "#F8F8F8",
         twitter: "#1DA1F2",
       },
       fontFamily: {
