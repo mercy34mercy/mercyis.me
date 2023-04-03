@@ -4,7 +4,7 @@ import { memo } from "react";
 import { ZennIcon } from "../../../components/icons/ZennIcon";
 import { Image } from "../../../components/Image";
 
-export type TimelineKind = "Zenn" | "Prtimes" | "Qiita" | "MyBlog";
+export type TimelineKind = "Zenn" | "Prtimes" | "Qiita" | "MyBlog" | "Note";
 
 export type TimelineItem = {
   title: string;
@@ -21,6 +21,8 @@ const TimelineImage = memo(({ kind }: { kind: TimelineKind }) => {
       return <ZennIcon width={20} height={20} />;
     case "Prtimes":
       return <Image imageName="prtimes.png" alt="PR TIMES" width={20} height={20} loading="lazy" />;
+    case "Note":
+      return <Image imageName="note.png" alt="note" width={20} height={20} loading="lazy" />;
     case "Qiita":
       return <Image imageName="qiita.png" alt="Qiita" width={20} height={20} loading="lazy" />;
     case "MyBlog":
