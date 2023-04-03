@@ -14,16 +14,16 @@ export const Bio = () => (
       height={100}
     />
     <div className="flex gap-4 pt-5">
-      <a href="https://twitter.com/apple_yagi">
+      <a href="https://twitter.com/mashikotyan34">
         <TwitterIcon fill="#1DA1F2" width={24} height={24} />
       </a>
-      <a href="https://github.com/apple-yagi">
+      <a href="https://github.com/mercy34mercy">
         <GitHubIcon width={24} height={24} />
       </a>
-      <a href="https://zenn.dev/apple_yagi">
+      <a href="https://zenn.dev/mercy34">
         <ZennIcon width={24} height={24} />
       </a>
-      <a href="https://qiita.com/apple-yagi">
+      <a href="https://qiita.com/mercy34mercy">
         <Image imageName="qiita.png" alt="Qiita" width={24} height={24} loading="eager" aria-label="Qiita" />
       </a>
     </div>
