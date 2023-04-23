@@ -29,6 +29,9 @@ export const Bio = () => (
       <a href="https://note.com/nanndemokakuyo">
         <Image imageName="note-white.png" alt="Note" width={24} height={24} loading="eager" aria-label="Note" />
       </a>
+      <a href="https://www.wantedly.com/id/mercy">
+        <Image imageName="wantedly.png" alt="Note" width={24} height={24} loading="eager" aria-label="Note" />
+      </a>
     </div>
   </div>
 );
