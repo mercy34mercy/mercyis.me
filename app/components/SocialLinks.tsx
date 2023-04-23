@@ -5,7 +5,7 @@ import { Image } from "./Image";
 import { LinkItem } from "./LinkItem";
 
 export const SocialLinks = () => (
-  <div className="grid grid-cols-2 xs:grid-cols-3 sm:grid-cols-5 flex-wrap gap-8">
+  <div className="grid grid-cols-2 xs:grid-cols-3 sm:grid-cols-6 flex-wrap gap-8">
     <a href="https://twitter.com/mashikotyan34">
       <LinkItem className="bg-gradient-to-br from-sky-300 via-sky-500 to-blue-500">
         <TwitterIcon width={64} height={64} />
@@ -29,6 +29,11 @@ export const SocialLinks = () => (
     <a href="https://note.com/nanndemokakuyo">
       <LinkItem className="bg-gradient-to-br from-slate-100 bg-white-100 to-black-300">
         <Image imageName="note.png" alt="Note" width={64} height={64} loading="eager" aria-label="Note" />
+      </LinkItem>
+    </a>
+    <a href="https://www.wantedly.com/id/mercy">
+      <LinkItem className="bg-gradient-to-br from-slate-100 bg-black-100 to-sky-300">
+        <Image imageName="wantedly.png" alt="Wantedly" width={64} height={64} loading="eager" aria-label="Note" />
       </LinkItem>
     </a>
   </div>
