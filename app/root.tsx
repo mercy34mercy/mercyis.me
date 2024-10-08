@@ -29,6 +29,8 @@ export default function App() {
       <head>
         <Meta />
         <Links />
+        <script>!function(n){if(!window[n]){var o=window[n]=function(){var n=[].slice.call(arguments);return o.x?o.x.apply(0,n):o.q.push(n)};o.q=[],o.i=Date.now(),o.allow=function(){o.o="allow"},o.deny=function(){o.o="deny"}}}("krt")</script>
+        <script async src="https://cdn-edge.karte.io/d678bae88fefae7d78495c9d5d45fd47/edge.js"></script>
       </head>
       <body className="text-primary bg-primary font-primary">
         <Container className="px-6">
