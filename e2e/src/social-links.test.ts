@@ -6,7 +6,7 @@ test("test", async ({ page }) => {
 
   // Twitterのリンクをクリックすると、自分のTwitterアカウントに遷移すること
   await page.getByRole("link", { name: "Twitter" }).click();
-  await expect(page).toHaveURL("https://twitter.com/mashikotyan34");
+  await expect(page).toHaveURL("https://twitter.com/mercy34mercy");
 
   // ポートフォリオサイトに戻る
   await page.goto("/");

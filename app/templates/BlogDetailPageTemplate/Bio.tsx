@@ -14,7 +14,7 @@ export const Bio = () => (
       height={100}
     />
     <div className="flex gap-4 pt-5">
-      <a href="https://twitter.com/mashikotyan34">
+      <a href="https://twitter.com/mercy34mercy">
         <TwitterIcon fill="#1DA1F2" width={24} height={24} />
       </a>
       <a href="https://github.com/mercy34mercy">

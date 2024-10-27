@@ -26,8 +26,8 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => ({
   "og:image": data.eyecatch.url,
   "og:site_name": "mercy",
   "twitter:card": data.eyecatch.url ? "summary_large_image" : "summary",
-  "twitter:creator": "@mashikotyan34",
-  "twitter:site": "@mashikotyan34",
+  "twitter:creator": "@mercy34mercy",
+  "twitter:site": "@mercy34mercy",
 });
 
 export const loader: LoaderFunction = async ({ params, context: { env } }) => {

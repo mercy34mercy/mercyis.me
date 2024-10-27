@@ -19,8 +19,8 @@ export const meta: MetaFunction = () => ({
   "og:image": "https://mercy34mercy.github.io/storage/mercy.avif",
   "og:site_name": "mercy",
   "twitter:card": "summary_large_image",
-  "twitter:creator": "@mashikotyan34",
-  "twitter:site": "@mashikotyan34",
+  "twitter:creator": "@mercy34mercy",
+  "twitter:site": "@mercy34mercy",
 });
 
 export default function App() {
